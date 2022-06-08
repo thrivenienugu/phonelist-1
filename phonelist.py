@@ -34,6 +34,7 @@ print('''Hello and welcome to the phone list, available commands:
     ADD    - add a phone number
     DELETE - delete a contact
     LIST   - list all phone numbers
+    SAVE   - save the data
     QUIT   - quit the program''')
       
 while True: ## REPL - Read Execute Program Loop
@@ -47,8 +48,11 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "DELETE":
         name = input("  Name: ")
         delete_phone(conn, name)
-    elif cmd == "QUIT":
+    elif cmd == "SAVE":
         save_phonelist(conn)
+        
+    elif cmd == "QUIT":
+        
         exit()
     else:
         print('Unknown command:',cmd)
