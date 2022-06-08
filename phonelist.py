@@ -37,7 +37,7 @@ print('''Hello and welcome to the phone list, available commands:
     QUIT   - quit the program''')
       
 while True: ## REPL - Read Execute Program Loop
-    cmd = input("Command: ")
+    cmd = input("Command: ").upper()
     if cmd == "LIST":
         print(read_phonelist(conn))
     elif cmd == "ADD":
